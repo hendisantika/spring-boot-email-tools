@@ -1,18 +1,18 @@
 # spring-boot-email-tools
 A set of services and tools for sending emails in a **Spring Boot** application using *Freemarker* template engine.
 
-**Source Website:** *[github.com/robertotru/spring-boot-email-tools](http://github.com/robertotru/spring-boot-email-tools/)*<br />
+**Source Website:** *[github.com/ozimov/spring-boot-email-tools](http://github.com/ozimov/spring-boot-email-tools/)*<br />
 
 **Latest Release:** *0.1.0*<br />
-**Latest Artifacts:** *com.github.robertotru:/spring-boot-email-tools* <br />
+**Latest Artifacts:** *com.github.ozimov/spring-boot-email-tools* <br />
 **Continuous Integration:**<br />
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.robertotru/spring-boot-email-tools/badge.svg)](https://maven-badges.herokuapp.com/maven-central/ com.github.robertotru/spring-boot-email-tools)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.ozimov/spring-boot-email-tools/badge.svg)](https://maven-badges.herokuapp.com/maven-central/ com.github.ozimov/spring-boot-email-tools)
 <br />
-[![Build Status](https://travis-ci.org/robertotru/spring-boot-email-tools.svg?branch=master)](https://travis-ci.org/robertotru/spring-boot-email-tools)
-[![codecov.io](https://codecov.io/github/robertotru/spring-boot-email-tools/coverage.svg?branch=master)](https://codecov.io/github/robertotru/spring-boot-email-tools?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/7a4364b93df6473fb18a597e900edceb)](https://www.codacy.com/app/roberto-trunfio/spring-boot-email-tools)
+[![Build Status](https://travis-ci.org/ozimov/spring-boot-email-tools.svg?branch=master)](https://travis-ci.org/ozimov/spring-boot-email-tools)
+[![codecov.io](https://codecov.io/github/ozimov/spring-boot-email-tools/coverage.svg?branch=master)](https://codecov.io/github/ozimov/spring-boot-email-tools?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/93cebf69c6864212a1cc84b326df21a8)](https://www.codacy.com/app/roberto-trunfio/spring-boot-email-tools)
 
-![codecov.io](https://codecov.io/github/robertotru/spring-boot-email-tools/branch.svg?branch=master)
+![codecov.io](https://codecov.io/github/ozimov/spring-boot-email-tools/branch.svg?branch=master)
 
 
 ## Dependency
@@ -22,7 +22,7 @@ Latest release is:
 <dependency>
     <groupId>it.ozimov</groupId>
     <artifactId>spring-boot-email-tools</artifactId>
-    <version>0.1.1</version>
+    <version>0.2.0</version>
 </dependency>
 ```
 
@@ -44,7 +44,7 @@ public class MainApplication  {
 }
 ```
 
-in you application.yml set the configuration needed to send the emails, e.g. if you want to send
+in your `application.yml` set the configuration needed to send the emails, e.g. if you want to send
 the emails using a Gmail account you can set:
 
 ```yml
@@ -186,7 +186,7 @@ This is required to set the a proper content-id.
 
 ## Exception handling
 
-This library uses Zalando's [Problems for Spring Web MVC library](https://github.com/zalando/problem-spring-web). To have an explicit handling of library specificy exceptions thrown by spring-boot-email-tools, just define your controller advice as follows.
+This library uses Zalando's [Problems for Spring Web MVC library](https://github.com/zalando/problem-spring-web). To have an explicit handling of library specific exceptions thrown by _spring-boot-email-tools_, just define your controller advice as follows.
 
 ```java
 @ControllerAdvice
@@ -198,8 +198,7 @@ public class ExceptionHandling implements EmailConversionAdviceTrait {
 ## Future plans
 
 Here are listed the backlog for the features to be added to the library in the near future:
-* Quartz scheduler for handling newsletter
-* Email queuing using priorities
+* Support for templates using _Velocity_ and _Mustache_
 
 Any contribution is welcome.
 
